@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cil61pt1fnljb"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_02nlv"]
+[ext_resource type="PackedScene" uid="uid://cwtcdqhp6gqn1" path="res://THEBEAN.glb" id="1_eiw0a"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wq6if"]
+radius = 0.984059
+height = 4.03626
+
+[node name="Player" type="CharacterBody3D"]
+motion_mode = 1
+script = ExtResource("1_02nlv")
+
+[node name="Pivot" type="Node3D" parent="."]
+transform = Transform3D(-0.456881, 0, 0.889528, 0, 1, 0, -0.889528, 0, -0.456881, 0, 0, 0)
+
+[node name="THEBEAN" parent="Pivot" instance=ExtResource("1_eiw0a")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_wq6if")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.34833, 12.9439)
+current = true

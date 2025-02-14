@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjljj7tgxyoy0"]
+
+[ext_resource type="PackedScene" uid="uid://cil61pt1fnljb" path="res://player.tscn" id="1_nct86"]
+[ext_resource type="PackedScene" uid="uid://cwtcdqhp6gqn1" path="res://THEBEAN.glb" id="2_tgfw7"]
+
+[node name="Node" type="Node"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.1545, 0)
+
+[node name="Player" parent="." instance=ExtResource("1_nct86")]
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.5978)
+
+[node name="THEBEAN" parent="Node3D" instance=ExtResource("2_tgfw7")]
