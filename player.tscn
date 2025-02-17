@@ -12,12 +12,17 @@ motion_mode = 1
 script = ExtResource("1_02nlv")
 
 [node name="Pivot" type="Node3D" parent="."]
-transform = Transform3D(-0.456881, 0, 0.889528, 0, 1, 0, -0.889528, 0, -0.456881, 0, 0, 0)
 
 [node name="THEBEAN" parent="Pivot" instance=ExtResource("1_eiw0a")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_wq6if")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.34833, 12.9439)
+[node name="Camera_Controller" type="Node3D" parent="."]
+top_level = true
+
+[node name="Camera_Target" type="Node3D" parent="Camera_Controller"]
+transform = Transform3D(1, 0, 0, 0, 0.955726, 0.294257, 0, -0.294257, 0.955726, 0, 6.07448, 16.9)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Controller/Camera_Target"]
