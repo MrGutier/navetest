@@ -8,7 +8,7 @@ extends CharacterBody3D
 @export var sensitivity = 300
 @export var acceleration=0.5
 @export var acceleration_horizontal=0.25
-@export var rotating_speed=0.05
+@export var rotating_speed=0.15
 @export var rotating_speed_z=0.04
 var target_velocity = Vector3.ZERO
 

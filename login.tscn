@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://cigdwvd26pscn"]
+
+[ext_resource type="Script" path="res://login.gd" id="1_ejlem"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ejlem")
+
+[node name="Name" type="TextEdit" parent="."]
+offset_left = 15.0
+offset_top = 36.0
+offset_right = 233.0
+offset_bottom = 75.0
+placeholder_text = "Nombre"
+
+[node name="Password" type="TextEdit" parent="."]
+offset_left = 16.0
+offset_top = 88.0
+offset_right = 239.0
+offset_bottom = 127.0
+placeholder_text = "Contraseña"
+
+[node name="Login" type="Button" parent="."]
+offset_left = 25.0
+offset_top = 147.0
+offset_right = 220.0
+offset_bottom = 178.0
+text = "Login"
+
+[node name="Register" type="Button" parent="."]
+offset_left = 27.0
+offset_top = 193.0
+offset_right = 228.0
+offset_bottom = 224.0
+text = "Register"
+
+[connection signal="button_down" from="Login" to="." method="_on_login_button_down"]
+[connection signal="button_down" from="Register" to="." method="_on_register_button_down"]
